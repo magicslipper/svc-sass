@@ -1,0 +1,65 @@
+/*
+Syntax error: Undefined mixin 'inner-rounded'.
+        on line 24 of spil_virtual_currency/sass/currency-product-list.scss, in `inner-rounded'
+        from line 24 of spil_virtual_currency/sass/currency-product-list.scss
+
+19: }
+20: 
+21: /* widget specific */
+22: 
+23: a.inner-rounded {
+24: 	@include inner-rounded;
+25: 	padding: 5px;
+26: 	margin:5px 0;
+27: 	display:block;
+28: 	width:100%;
+29: 	height:25px;
+
+Backtrace:
+spil_virtual_currency/sass/currency-product-list.scss:24:in `inner-rounded'
+spil_virtual_currency/sass/currency-product-list.scss:24
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:170:in `visit_mixin'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:18:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:238:in `visit_rule'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:18:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:47:in `visit_root'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:18:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:7:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/tree/root_node.rb:20:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/engine.rb:299:in `_render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/engine.rb:246:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/plugin/compiler.rb:340:in `update_stylesheet'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/plugin/compiler.rb:202:in `block in update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/plugin/compiler.rb:200:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/plugin/compiler.rb:200:in `update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/plugin/compiler.rb:234:in `watch'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/plugin.rb:107:in `method_missing'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/exec.rb:431:in `watch_or_update'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/exec.rb:302:in `process_result'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/exec.rb:41:in `parse'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/lib/sass/exec.rb:21:in `parse!'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.17/bin/sass:8:in `<top (required)>'
+C:/Ruby193/bin/sass:23:in `load'
+C:/Ruby193/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'inner-rounded'.\A         on line 24 of spil_virtual_currency/sass/currency-product-list.scss, in `inner-rounded'\A         from line 24 of spil_virtual_currency/sass/currency-product-list.scss\A \A 19: }\A 20: \A 21: /* widget specific */\A 22: \A 23: a.inner-rounded {\A 24: 	@include inner-rounded;\A 25: 	padding: 5px;\A 26: 	margin:5px 0;\A 27: 	display:block;\A 28: 	width:100%;\A 29: 	height:25px;"; }

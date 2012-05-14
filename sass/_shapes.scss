@@ -1,0 +1,48 @@
+.arrow-n, .arrow-e, .arrow-s, .arrow-w {
+	border-style: dashed;
+	border-color: transparent;
+	border-width: 1.53em;
+	display: -moz-inline-box;
+	display: inline-block;
+	font-size: 180%;
+	height: 0;
+	line-height: 0;
+	position: absolute;
+	vertical-align: middle;
+	width: 0;
+}
+
+@mixin arrow-e {
+	border-left-width: 1em;
+	border-left-style: solid;
+	top: 120px;
+	right: -66px;
+	z-index: 0;
+}
+
+@mixin arrow-w {
+	border-right-width: 1.5em;
+	border-right-style: solid;
+	border-right-color: white;
+	top: 8px;
+	right: 100px;
+	z-index: 999;
+	font-size: 50%;
+}
+
+@mixin arrow-base {
+	left: -31px;
+	top: -13px;
+	position: absolute;
+	height: 25px;
+	width: 13px;
+}
+
+@mixin circle {
+	position: absolute;
+	width: 2em;
+	height: 2em;
+	@include outer-rounded(5em);
+	right:10px;
+	top: 5px;
+  }

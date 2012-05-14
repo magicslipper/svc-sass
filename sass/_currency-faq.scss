@@ -1,0 +1,47 @@
+#currency-faq {
+	float: left;
+	clear:left;
+	width: 387px;
+	margin: 16px 10px 10px 10px;
+	position: relative;
+	padding: 83px 10px 10px 10px;
+}
+
+.currency-left-content {
+	text-align:left;
+	}
+
+#currency-faq .box-bg {
+	padding-top: 80px;
+}
+
+#currency-faq h1 {
+	position: absolute;
+	top: 7px;
+	left: 123px;
+}
+
+.currency-site-mascot {
+	height: 147px;
+	background: url('http://dave.wlk.cc/coins-project/images/faq-coins.png') no-repeat scroll 0 0 transparent;
+	position: absolute;
+	width: 230px;
+	top: -45px;
+}
+
+.faq-toggled-content {
+	padding: 10px 10px 5px 30px;
+	text-align: left
+}
+
+.faq-toggled-content p {
+	margin-bottom:10px;
+}
+
+.faq-toggled-switch {
+	padding: 10px;
+}
+ 
+.faq-toggled-content.extra-padding .currency-faq-title {
+	margin-top:13px;
+ }

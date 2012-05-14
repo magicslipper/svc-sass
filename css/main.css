@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+ul li {
+  list-style: none; }
+
+.clear {
+  clear: both; }
+
+input[type="radio"] {
+  background-color: transparent; }
+
+#currency-infopanel-1, #currency-infopanel-2 {
+  width: 262px;
+  min-height: 321px;
+  position: relative;
+  top: 10px;
+  float: left;
+  text-align: center; }
+
+#currency-infopanel-1, #currency-product-list {
+  margin-right: 30px; }
+
+.gradient-box-bg {
+  padding: 10px 25px;
+  min-height: 300px;
+  width: 210px;
+  margin: 0 1px 1px; }
+
+.currency-foreground-image {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  z-index: 50; }
+
+.reflection {
+  position: absolute;
+  bottom: -18px;
+  width: 100%;
+  left: 0;
+  height: 17px;
+  border-radius: 10px 10px 0 0!important; }
+
+.arrow-base {
+  left: -31px;
+  top: -13px;
+  position: absolute;
+  height: 25px;
+  width: 13px; }
+
+#currency-product-list {
+  position: relative;
+  text-align: center;
+  width: 331px;
+  float: left; }
+
+#currency-product-list .gradient-box-bg {
+  width: 279px; }
+
+#currency-product-list ul li {
+  text-align: left;
+  margin: 5px; }
+
+#currency-product-list ul li {
+  list-style: none; }
+
+/* widget specific */
+a.inner-rounded {
+  padding: 5px;
+  margin: 5px 0;
+  display: block;
+  width: 100%;
+  height: 25px; }
+
+a.inner-rounded input {
+  position: absolute;
+  left: 10px;
+  margin-top: 5px;
+  z-index: 1; }
+
+a.inner-rounded span {
+  line-height: 23px; }
+
+.currency-icon {
+  background: url(../images/bundle-icon.png) no-repeat scroll 0 0 transparent;
+  width: 40px;
+  height: 27px;
+  float: left; }
+
+.currency-icon.bundle-1 {
+  background-position: 0 -21px; }
+
+.currency-icon.bundle-2 {
+  background-position: 0 -60px; }
+
+.currency-icon.bundle-3 {
+  background-position: 0 -95px; }
+
+.currency-icon.bundle-4 {
+  background-position: 0 -136px; }
+
+.currency-icon.bundle-5 {
+  background-position: 0 -174px; }
+
+.currency-original-total {
+  font-size: 125%;
+  text-decoration: line-through;
+  margin-right: 15px;
+  float: left;
+  width: 54px; }
+
+.currency-offer-total {
+  font-size: 145%;
+  font-weight: bold;
+  position: relative;
+  display: inline-block; }
+
+.currency-offer-total.extra {
+  line-height: 8px;
+  margin-top: 3px; }
+
+.currency-price {
+  float: right;
+  font-size: 125%;
+  font-weight: bold; }
+
+.plus-extra {
+  font-size: 60%; }
+
+.extras-list {
+  display: none; }
+
+.inner-rounded:hover + .extras-list {
+  display: block;
+  position: absolute;
+  left: 346px;
+  overflow: visible;
+  width: 90px;
+  background-color: white;
+  z-index: 99;
+  margin-top: -40px;
+  padding: 5px;
+  box-shadow: 1px 1px 3px #333; }
+
+.divider-line-top {
+  margin-top: 20px;
+  height: 1px; }
+
+.divider-line-bottom {
+  margin-bottom: 20px;
+  height: 1px; }
+
+.move-text-for-icon {
+  margin-right: 51px;
+  margin-left: 0; }
+
+.text {
+  float: left; }
+
+.arrow {
+  font-size: 137%;
+  position: absolute;
+  top: 2px;
+  left: 8px; }
+
+#currency-faq {
+  float: left;
+  clear: left;
+  width: 387px;
+  margin: 16px 10px 10px 10px;
+  position: relative;
+  padding: 83px 10px 10px 10px; }
+
+.currency-left-content {
+  text-align: left; }
+
+#currency-faq .box-bg {
+  padding-top: 80px; }
+
+#currency-faq h1 {
+  position: absolute;
+  top: 7px;
+  left: 123px; }
+
+.currency-site-mascot {
+  height: 147px;
+  background: url("http://dave.wlk.cc/coins-project/images/faq-coins.png") no-repeat scroll 0 0 transparent;
+  position: absolute;
+  width: 230px;
+  top: -45px; }
+
+.faq-toggled-content {
+  padding: 10px 10px 5px 30px;
+  text-align: left; }
+
+.faq-toggled-content p {
+  margin-bottom: 10px; }
+
+.faq-toggled-switch {
+  padding: 10px; }
+
+.faq-toggled-content.extra-padding .currency-faq-title {
+  margin-top: 13px; }
+
+.transaction-history {
+  float: left;
+  width: 473px; }
+
+.transaction-history.outer-rounded {
+  background-color: #FFF;
+  padding: 8px; }
+
+.transaction-icon {
+  background: url(../images/transaction-icon.png) no-repeat scroll 0 0 transparent;
+  height: 22px;
+  width: 31px;
+  display: inline-block; }
+
+.transaction-block {
+  text-align: left;
+  padding: 10px 5px; }
+
+.transaction-block img {
+  float: left;
+  margin-right: 10px; }
+
+.coins-event {
+  float: right;
+  margin-top: -17px;
+  font-weight: bold;
+  font-size: 120%; }
+
+.coins-event.addition {
+  color: #379033; }
+
+.coins-event.subtraction {
+  color: #910201; }
+
+.plus-icon {
+  background-color: #379033;
+  color: #FFF;
+  padding: 1px 4px; }
+
+.minus-icon {
+  background-color: #910201;
+  color: #FFF;
+  padding: 1px 4px; }
+
+.prev-transactions,
+.next-transactions {
+  cursor: pointer;
+  font-weight: bold; }
+
+.transactions-nav {
+  float: left;
+  margin: 10px 5px; }
+
+#currency-featured-games {
+  display: block;
+  float: left;
+  margin-bottom: 30px;
+  text-align: left;
+  margin-top: 10px;
+  padding: 8px;
+  width: 450px; }
+
+#currency-featured-games ul li {
+  list-style: none;
+  margin: 10px 0 10px 10px; }
+
+#currency-featured-games img {
+  width: 100px; }
+
+#currency-featured-games li {
+  float: left; }
+
+#currency-featured-games a {
+  font-weight: bold; }

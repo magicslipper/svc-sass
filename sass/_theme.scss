@@ -1,0 +1,39 @@
+@import "rounded", "colors", "typography", "animation", "shapes";
+
+.gradient-wrapper {
+	@include gradient-wrapper;
+	@include outer-rounded;
+}
+
+/* corners */
+
+.outer-rounded {
+	@include outer-rounded;
+}
+
+.gradient-box-bg{
+	@include bg-gradient;
+}
+
+.inner-box-bg {
+	@include outer-rounded;
+	@include inner-box-bg;
+}
+
+/* shape colors */
+
+.arrow-e {
+	@include arrow-e;
+	border-left-color: $medium;	
+}
+
+.arrow-base {
+	background-color:$medium;
+ }
+
+.reflection {
+	@include reflection;
+}
+
+
+

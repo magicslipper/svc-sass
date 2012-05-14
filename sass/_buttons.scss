@@ -1,0 +1,24 @@
+.primary-cta {
+	@include inner-rounded;
+	@include primary-cta-button;
+	text-transform:uppercase;
+	font-size:140%;
+	position:relative;
+	color:#FFF;
+	font-weight:bold;
+	margin-left: 0;
+	padding: 11px 25px;
+	font-weight: bold;
+	border: 1px solid $primary-cta-dark;
+}
+
+.primary-cta:hover {
+	@include inner-rounded;
+	@include primary-cta-button-hover;
+
+}
+
+.circle {
+	@include circle;
+	@include circle-bg;
+}

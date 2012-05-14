@@ -1,0 +1,78 @@
+@import "rounded", 
+		"colors1", 
+		"typography", 
+		"animation", 
+		"shapes",
+		"buttons";
+
+
+.gradient-wrapper {
+	@include gradient-wrapper;
+	@include outer-rounded;
+}
+
+/* corners */
+
+.outer-rounded {
+	@include outer-rounded;
+}
+
+.inner-rounded {
+	@include inner-rounded;
+}
+
+a.inner-rounded {
+	border: 1px solid $medium;
+	background-color: $light;
+	&:hover {
+		border: 1px solid $dark;
+		box-shadow: 0px 0px 3px $dark;
+		background-color: $primary-cta;
+		}
+}
+
+.gradient-box-bg{
+	@include bg-gradient;
+}
+
+.inner-box-bg {
+	@include outer-rounded;
+	@include inner-box-bg;
+}
+
+.box-bg{
+	@include box-bg;
+}
+
+/* shape colors */
+
+.arrow-e {
+	@include arrow-e;
+	border-left-color: $medium;	
+}
+
+.arrow-base {
+	background-color:$medium;
+ }
+
+.reflection {
+	@include reflection;
+}
+
+.box-title {
+	@include box-title;
+	text-align:center
+}
+
+
+/* currency faq */
+
+.faq-toggled-content {
+	@include bottom-border;
+}
+
+
+
+
+
+

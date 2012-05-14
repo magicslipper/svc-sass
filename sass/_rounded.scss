@@ -1,0 +1,11 @@
+@mixin outer-rounded ($radius : 10px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius; 	
+    border-radius: $radius;
+}  
+
+@mixin inner-rounded ($radius : 5px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius; 	
+    border-radius: $radius;
+}

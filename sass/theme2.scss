@@ -71,6 +71,10 @@ a.inner-rounded {
 	@include bottom-border;
 }
 
+.arrow-e-small {
+	@include arrow-e-small;
+	border-left-color: $headlines;
+}
 
 
 

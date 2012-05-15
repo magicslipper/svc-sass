@@ -1,3 +1,5 @@
+/* +++++++++++++++++++++++ colours ++++++++++++++++++++++++++ */
+
 // family base colors
 $light: #fefeff;
 $medium: #bcd5f4;
@@ -6,6 +8,7 @@ $base-font: #676767;
 $headlines: #0098FF;
 $special-headlines: #DC201F;
 $links: #333;
+$button-text: #fff;
 $primary-cta: $medium;
 $primary-cta-dark: #016fd7;
 $primary-cta-light: #6badee;
@@ -115,7 +118,8 @@ $channel-font: SinclairScriptRRBoldRegular;
 	background-color: #FFF;
 }
 
-@mixin bottom-border {		
+@mixin bottom-border {	
+	border: 1px solid $border-default;
 }
 
 @mixin primary-cta-button {
@@ -152,6 +156,3 @@ $channel-font: SinclairScriptRRBoldRegular;
 	background-color:$light;
 }
 
-.transaction-block.odd {
-	@include odd;
-}

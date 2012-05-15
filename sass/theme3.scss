@@ -70,6 +70,21 @@ a.inner-rounded {
 	@include outer-rounded(10px 10px 0 0);
 	text-align: center;
 	}
+	
+/* currency faq */
+
+.faq-toggled-content {
+	@include bottom-border;
+}
+
+.arrow-e-small {
+	@include arrow-e-small;
+	border-left-color: $dark;
+}
+
+.currency-faq-title {
+	color: $dark;
+}
 
 
 

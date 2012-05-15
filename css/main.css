@@ -11,6 +11,14 @@ ul li {
 input[type="radio"] {
   background-color: transparent; }
 
+/* +++++++++++++++++++++++ Layout ++++++++++++++++++++++++++ */
+#currency-main {
+  padding: 0 0 20px;
+  min-height: 460px;
+  position: relative;
+  border-bottom: 1px dotted #CCC;
+  margin: 22px 10px 0; }
+
 #currency-infopanel-1, #currency-infopanel-2 {
   width: 262px;
   min-height: 321px;
@@ -203,6 +211,9 @@ a.inner-rounded span {
 .faq-toggled-content.extra-padding .currency-faq-title {
   margin-top: 13px; }
 
+.currency-faq-title {
+  padding-left: 25px; }
+
 .transaction-history {
   float: left;
   width: 473px; }
@@ -277,3 +288,5 @@ a.inner-rounded span {
 
 #currency-featured-games a {
   font-weight: bold; }
+
+/* Bolllllllllllox */

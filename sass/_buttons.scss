@@ -4,7 +4,7 @@
 	text-transform:uppercase;
 	font-size:140%;
 	position:relative;
-	color:#FFF;
+	color: $button-text;
 	font-weight:bold;
 	margin-left: 0;
 	padding: 11px 25px;
@@ -21,4 +21,11 @@
 .circle {
 	@include circle;
 	@include circle-bg;
+}
+
+.arrow-e-small.cta {
+	border-left-color:$button-text;
+	position: relative;
+	top: 11px;
+	left: 4px;
 }

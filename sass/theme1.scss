@@ -1,6 +1,7 @@
-@import "rounded", 
-		"colors1", 
-		"typography", 
+@import "colors1",
+		"typography",
+		"layout",
+		"rounded",  
 		"animation", 
 		"shapes",
 		"buttons";
@@ -40,6 +41,10 @@ a.inner-rounded {
 	@include inner-box-bg;
 }
 
+.transaction-block.odd {
+	@include odd;
+}
+
 .box-bg{
 	@include box-bg;
 }
@@ -71,6 +76,10 @@ a.inner-rounded {
 	@include bottom-border;
 }
 
+.arrow-e-small {
+	@include arrow-e-small;
+	border-left-color: $headlines;
+}
 
 
 

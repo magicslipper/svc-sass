@@ -1,4 +1,8 @@
-.arrow-n, .arrow-e, .arrow-s, .arrow-w {
+.arrow-n, 
+.arrow-e, 
+.arrow-e-small, 
+.arrow-s, 
+.arrow-w {
 	border-style: dashed;
 	border-color: transparent;
 	border-width: 1.53em;
@@ -17,6 +21,14 @@
 	border-left-style: solid;
 	top: 120px;
 	right: -66px;
+	z-index: 0;
+}
+
+@mixin arrow-e-small {
+	border-width: 0.23em;
+	border-left-width: 0.25em;
+	border-left-style: solid;
+	position: relative;
 	z-index: 0;
 }
 

@@ -21,7 +21,12 @@
 	@include inner-rounded;
 }
 
-a.inner-rounded {
+.has-js .label_radio { 
+	background: url(../radio-sprite-girls.png) no-repeat 0px 7px; 
+}
+
+.label_radio .inner-rounded {
+	@include inner-rounded;
 	border: 1px solid $medium;
 	background-color: $light;
 	&:hover {
@@ -29,6 +34,13 @@ a.inner-rounded {
 		box-shadow: 0px 0px 3px $dark;
 		background-color: $primary-cta;
 		}
+}
+
+
+.label_radio.r_on .inner-rounded {
+		border: 1px solid #558200;
+		box-shadow: 0px 0px 3px $dark;
+		background-color: #f5fde6;
 }
 
 .gradient-box-bg{
@@ -42,6 +54,14 @@ a.inner-rounded {
 
 .box-bg{
 	@include box-bg;
+}
+
+.divider-line-top {
+	background-color:$light;
+}
+
+.divider-line-bottom {
+	background-color:$dark;
 }
 
 /* shape colors */

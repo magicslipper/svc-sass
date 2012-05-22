@@ -15,17 +15,5 @@
 .primary-cta:hover {
 	@include inner-rounded;
 	@include primary-cta-button-hover;
-
 }
 
-.circle {
-	@include circle;
-	@include circle-bg;
-}
-
-.arrow-e-small.cta {
-	border-left-color:$button-text;
-	position: relative;
-	top: 11px;
-	left: 4px;
-}

@@ -1,5 +1,6 @@
 <html>
    <head>
+   <link rel="stylesheet" href="css/main.css">
         <script type="text/javascript">
             var ts = (new Date()).getTime()
             var css = location.search.match(/css=([^&]+)/);
@@ -7,8 +8,58 @@
                css = css[1]; 
                document.write('<link rel="stylesheet" href="css/'+css+'?'+ts+'" />');
             }
+			
+			var d = document;
+			var safari = (navigator.userAgent.toLowerCase().indexOf('safari') != -1) ? true : false;
+			var gebtn = function(parEl,child) { return parEl.getElementsByTagName(child); };
+			onload = function() {
+
+				var body = gebtn(d,'body')[0];
+				body.className = body.className && body.className != '' ? body.className + ' has-js' : 'has-js';
+
+				if (!d.getElementById || !d.createTextNode) return;
+				var ls = gebtn(d,'label');
+				for (var i = 0; i < ls.length; i++) {
+					var l = ls[i];
+					if (l.className.indexOf('label_') == -1) continue;
+					var inp = gebtn(l,'input')[0];
+					if (l.className == 'label_check') {
+						l.className = (safari && inp.checked == true || inp.checked) ? 'label_check c_on' : 'label_check c_off';
+						l.onclick = check_it;
+					};
+					if (l.className == 'label_radio') {
+						l.className = (safari && inp.checked == true || inp.checked) ? 'label_radio r_on' : 'label_radio r_off';
+						l.onclick = turn_radio;
+					};
+				};
+			};
+			var check_it = function() {
+				var inp = gebtn(this,'input')[0];
+				if (this.className == 'label_check c_off' || (!safari && inp.checked)) {
+					this.className = 'label_check c_on';
+					if (safari) inp.click();
+				} else {
+					this.className = 'label_check c_off';
+					if (safari) inp.click();
+				};
+			};
+			var turn_radio = function() {
+				var inp = gebtn(this,'input')[0];
+				if (this.className == 'label_radio r_off' || inp.checked) {
+					var ls = gebtn(this.parentNode,'label');
+					for (var i = 0; i < ls.length; i++) {
+						var l = ls[i];
+						if (l.className.indexOf('label_radio') == -1)  continue;
+						l.className = 'label_radio r_off';
+					};
+					this.className = 'label_radio r_on';
+					if (safari) inp.click();
+				} else {
+					this.className = 'label_radio r_off';
+					if (safari) inp.click();
+				};
+			};
         </script>
-		 <link rel="stylesheet" href="css/main.css">
    </head>
     <body>
 		<section id="currency-main">
@@ -24,40 +75,40 @@
 				<div class="clear"></div>
 			</article>	 
 			
-			<article id="currency-product-list" class="outer-rounded gradient-wrapper wider">
+						<article id="currency-product-list" class="outer-rounded gradient-wrapper wider">
 			<div class="outer-rounded gradient-box-bg">
 				<h1 class="box-title">Gamesgames.com Credits</h1>
 				<p>You use real world money to fund your Wallet with</p>
-				<form>
-					<ul>
-						<li>
-							<a class="inner-rounded" id="bundle-link-1">
-								<input type="radio" name="coins-1" value="4.99">
-									<span class="currency-icon bundle-1"></span>
-									<span class="currency-original-total">58000</span>
-									<span class="currency-offer-total">60000</span>
-									<span class="currency-price">4.99 USD</span>
-							</a>
-						</li>
-						<li>
-							<a class="inner-rounded" id="bundle-link-2">
-								<input type="radio" name="coins-1" value="7.99">
-								<span class="currency-icon bundle-2"></span>
-								<span class="currency-original-total">73000</span>
-								<span class="currency-offer-total">75000</span>
-								<span class="currency-price">7.99 USD</span>
-							</a>
-						</li>
-						<li>
-							<a class="inner-rounded" id="bundle-link-3">
-								<input type="radio" name="coins-1" value="12">
+				<fieldset class="radios">
+					<label class="label_radio" for="radio-1">
+						<input name="sample-radio" id="radio-1" value="1" type="radio" />
+						<div class="inner-rounded">
+							<span class="currency-icon bundle-1"></span>
+							<span class="currency-original-total">58000</span>
+							<span class="currency-offer-total">60000</span>
+							<span class="currency-price">4.99 USD</span>
+						</div>
+					</label>
+					<label class="label_radio" for="radio-2">
+						<input name="sample-radio" id="radio-2" value="1" type="radio" />
+						<div class="inner-rounded">
+							<span class="currency-icon bundle-2"></span>
+							<span class="currency-original-total">73000</span>
+							<span class="currency-offer-total">75000</span>
+							<span class="currency-price">7.99 USD</span>
+						</div>
+					</label>
+					<label class="label_radio" for="radio-3">
+						<input name="sample-radio" id="radio-3" value="1" type="radio" />
+							<div class="inner-rounded">
 								<span class="currency-icon bundle-3"></span>
 								<span class="currency-original-total">108000</span>
 								<span class="currency-offer-total extra">110000<br>
-									<span class="plus-extra">+ Extra</span>
+								<span class="plus-extra">+ Extra</span>
 								</span>
 								<span class="currency-price">12.00 USD</span>
-							</a>
+							</div>
+						</label>
 							<!--<div class="extras-list inner-rounded">
 							<span class="arrow-w"></span>
 								<h4>Extra:</h4>
@@ -66,46 +117,28 @@
 								+1500 Food<br>
 								+3000 Coins</p>
 							</div>-->
-						</li>
-						<li>
-							<a class="inner-rounded" id="bundle-link-4">
-								<input type="radio" name="coins-1" value="39.95">
+					<label class="label_radio" for="radio-4">
+						<input name="sample-radio" id="radio-4" value="1" type="radio" />
+							<div class="inner-rounded">
 								<span class="currency-icon bundle-4"></span>
 								<span class="currency-original-total">135000</span>
 								<span class="currency-offer-total extra">137000<br>
 									<span class="plus-extra">+ Extra</span>
 								</span>
 								<span class="currency-price">39.95 USD</span>
-							</a>
-							<!--<div class="extras-list inner-rounded">
-							<span class="arrow-w"></span>
-								<h4>Extra:</h4>
-								<p>+1000 wood<br>
-								+1000 Stone<br>
-								+1500 Food<br>
-								+3000 Coins</p>
-							</div>-->
-						</li>
-						<li>
-							<a class="inner-rounded" id="bundle-link-5">
-								<input type="radio" name="coins-1" value="99.00">
+							</div>
+						</label>
+					<label class="label_radio" for="radio-5">
+						<input name="sample-radio" id="radio-5" value="1" type="radio" />
+							<div class="inner-rounded">
 								<span class="currency-icon bundle-5"></span>
 								<span class="currency-original-total">195000</span>
 								<span class="currency-offer-total extra">200000<br>
 									<span class="plus-extra">+ Extra</span>
 								</span>
 								<span class="currency-price">99.00 USD</span>
-							</a>
-							<!--<div class="extras-list inner-rounded">
-							<span class="arrow-w"></span>
-								<h4>Extra:</h4>
-								<p>+1000 wood<br>
-								+1000 Stone<br>
-								+1500 Food<br>
-								+3000 Coins</p>
-							</div>-->
-						</li>
-					</ul>
+							</div>
+						</label>	
 					<div class="divider-line-top"></div>
 					<div class="divider-line-bottom"></div>
 					<button id="payment-pop-up" class="inner-rounded primary-cta" href="give-us-your-cash.html?iframe">
@@ -113,12 +146,12 @@
 						<span class="circle">
 							<p class="arrow-e-small cta"></p>
 						</span>
-					</button>
-				</form>
+					</button>						
+				</fieldset>
 				<span class="arrow-e"><span class="arrow-base"></span></span>
 				<span class="reflection"></span>
 			</div>
-		</article>	  	  
+		</article>	
 			
 			
 			
@@ -131,6 +164,7 @@
 					<span class="reflection"></span>
 				</div>
 			</article>
+			<div class="clear"></div>
 		</section><!--/ content -->
 
 		<section id="currency-left-content">
@@ -201,9 +235,10 @@
 					</div>
 				</div>
 			</article>
+			<div class="clear"></div>
 		</section>
-	<section>
-	<article id="currency-featured-games" class="currency-games-list outer-rounded">
+	<section id="currency-right-content">
+	<article id="currency-featured-games" class="box-bg outer-rounded">
 			<h1 class="box-title">Use coins in these featured games</h1>
 			<ul>
 				<li>
@@ -389,6 +424,7 @@
 			<a class="prev-transactions">prev</a> | <a class="next-transactions">next</a>	
 		</div>
 	</article>
+	<div class="clear"></div>
 	</section>
     </body>
 </html>

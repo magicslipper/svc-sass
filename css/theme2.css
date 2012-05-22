@@ -34,17 +34,11 @@ h1, h2, h3 {
 h1 {
   font-size: 190%; }
 
-/* +++++++++++++++++++++++ Animation ++++++++++++++++++++++++++ */
-.light-effects {
-  position: absolute;
-  width: 255px;
-  height: 255px;
-  left: 3px;
-  overflow: hidden;
-  border: none 0;
-  z-index: 40;
-  bottom: 0; }
+/* currency transaction history */
+#currency-transactions .box-title {
+  text-align: left; }
 
+/* +++++++++++++++++++++++ Animation ++++++++++++++++++++++++++ */
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotate(0deg);
@@ -84,23 +78,7 @@ h1 {
   -ms-animation-iteration-count: infinite;
   -ms-animation-timing-function: linear; }
 
-.arrow-n,
-.arrow-e,
-.arrow-e-small,
-.arrow-s,
-.arrow-w {
-  border-style: dashed;
-  border-color: transparent;
-  border-width: 1.53em;
-  display: -moz-inline-box;
-  display: inline-block;
-  font-size: 180%;
-  height: 0;
-  line-height: 0;
-  position: absolute;
-  vertical-align: middle;
-  width: 0; }
-
+/* .arrow-n, .arrow-e, .arrow-e-small, .arrow-s, .arrow-w  */
 .primary-cta {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -152,39 +130,6 @@ h1 {
   background: linear-gradient(top, #a6821e 0%, #eedd98 100%);
   /* W3C */ }
 
-.circle {
-  position: absolute;
-  width: 2em;
-  height: 2em;
-  -webkit-border-radius: 5em;
-  -moz-border-radius: 5em;
-  border-radius: 5em;
-  right: 10px;
-  top: 5px;
-  background: #74b2f0;
-  /* Old browsers */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc0YjJmMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjclIiBzdG9wLWNvbG9yPSIjNDk5OWU5IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMzYlIiBzdG9wLWNvbG9yPSIjMTk3ZGRkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTclIiBzdG9wLWNvbG9yPSIjMDE2ZmQ3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTMlIiBzdG9wLWNvbG9yPSIjMDE2ZmQ3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzMwOGFkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-  background: -moz-linear-gradient(top, #a6821e 0%, #eedd98 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a6821e), color-stop(100%, #eedd98));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #a6821e 0%, #eedd98 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #a6821e 0%, #eedd98 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #a6821e 0%, #eedd98 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #a6821e 0%, #eedd98 100%);
-  /* W3C */
-  box-shadow: 4px 5px 7px #a6821e inset; }
-
-.arrow-e-small.cta {
-  border-left-color: white;
-  position: relative;
-  top: 11px;
-  left: 4px; }
-
 .gradient-wrapper {
   background: #ffe7f5;
   /* Old browsers */
@@ -217,13 +162,24 @@ h1 {
   -moz-border-radius: 5px;
   border-radius: 5px; }
 
-a.inner-rounded {
+.has-js .label_radio {
+  background: url(../radio-sprite-girls.png) no-repeat 0px 7px; }
+
+.label_radio .inner-rounded {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   border: 1px solid #ff99cc;
   background-color: #ffe7f5; }
-  a.inner-rounded:hover {
+  .label_radio .inner-rounded:hover {
     border: 1px solid #a60c7a;
     box-shadow: 0px 0px 3px #a60c7a;
     background-color: #f6e490; }
+
+.label_radio.r_on .inner-rounded {
+  border: 1px solid #558200;
+  box-shadow: 0px 0px 3px #a60c7a;
+  background-color: #f5fde6; }
 
 .gradient-box-bg {
   background: #ffe7f5;
@@ -252,13 +208,16 @@ a.inner-rounded {
 .box-bg {
   background-color: #ff99cc; }
 
+.divider-line-top {
+  background-color: #ffe7f5; }
+
+.divider-line-bottom {
+  background-color: #a60c7a; }
+
 /* shape colors */
 .arrow-e {
   border-left-width: 1em;
   border-left-style: solid;
-  top: 120px;
-  right: -66px;
-  z-index: 0;
   border-left-color: #ff99cc; }
 
 .arrow-base {

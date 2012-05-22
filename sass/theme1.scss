@@ -22,17 +22,7 @@
 	@include inner-rounded;
 }
 
-a.inner-rounded {
-	border: 1px solid $medium;
-	background-color: $light;
-	&:hover {
-		border: 1px solid $dark;
-		box-shadow: 0px 0px 3px $dark;
-		background-color: $primary-cta;
-		}
-}
-
-.gradient-box-bg{
+.gradient-box-bg {
 	@include bg-gradient;
 }
 
@@ -49,8 +39,24 @@ a.inner-rounded {
 	@include box-bg;
 }
 
+.divider-line-top {
+	background-color:$light;
+}
+
+.divider-line-bottom {
+	background-color:$dark;
+}
+
 /* shape colors */
 
+.arrow-n, .arrow-e, .arrow-e-small, .arrow-s, .arrow-w {
+	@include arrow;
+}
+
+.arrow-e-small {
+	@include arrow-e-small;
+	border-left-color: $headlines;
+}
 .arrow-e {
 	@include arrow-e;
 	border-left-color: $medium;	
@@ -59,6 +65,15 @@ a.inner-rounded {
 .arrow-base {
 	background-color:$medium;
  }
+
+.circle {
+	@include circle;
+	@include circle-bg;
+}
+ 
+.arrow-e-small.cta {
+	border-left-color:$button-text;
+}
 
 .reflection {
 	@include reflection;
@@ -70,16 +85,42 @@ a.inner-rounded {
 }
 
 
+/* currency-product-list theme stuff */
+
+.label_radio .inner-rounded {
+	@include inner-rounded;
+	border: 1px solid $medium;
+	background-color: $light;
+	&:hover {
+		border: 1px solid $dark;
+		box-shadow: 0px 0px 3px $dark;
+		background-color: $primary-cta;
+		}
+}
+
+.label_radio.r_on .inner-rounded {
+		border: 1px solid #558200;
+		box-shadow: 0px 0px 3px $dark;
+		background-color: #f5fde6;
+}
+
+.currency-offer-total {
+	color: $headlines
+}
+
+.currency-price {
+	color: $dark
+}
+
+
+
 /* currency faq */
 
 .faq-toggled-content {
 	@include bottom-border;
 }
 
-.arrow-e-small {
-	@include arrow-e-small;
-	border-left-color: $headlines;
-}
+
 
 
 

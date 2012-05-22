@@ -7,6 +7,9 @@
 
 #currency-product-list .gradient-box-bg {
 	width:279px;
+	padding: 10px 25px;
+	min-height: 300px;
+	margin: 0 1px 1px;
 }
 
 #currency-product-list ul li {
@@ -20,23 +23,21 @@
 
 /* widget specific */
 
-a.inner-rounded {
-	//@include inner-rounded;
+.label_radio .inner-rounded {
 	padding: 5px;
 	margin:5px 0;
 	display:block;
-	width:100%;
 	height:25px;
 }
 
-a.inner-rounded input {
+#currency-product-list .inner-rounded input {
 	position: absolute;
 	left: 10px;
 	margin-top: 5px;
 	z-index:1;
 }
 
-a.inner-rounded span {
+#currency-product-list .inner-rounded span {
 	line-height:23px;	
 }
 
@@ -68,21 +69,20 @@ a.inner-rounded span {
 }
 
 .currency-original-total{
-	font-size: 125%;
+	font-size: 110%;
 	text-decoration: line-through;
-	margin-right: 15px;
 	float: left;
-	width: 54px;
+	width: 50px;
 }
 
 .currency-offer-total{
-	font-size: 145%;
+	font-size: 135%;
 	font-weight: bold;
 	position: relative;
 	display: inline-block;
 }
 
-.currency-offer-total.extra {
+#currency-product-list .currency-offer-total.extra {
 	line-height:8px;
 	margin-top:3px;
 }
@@ -101,18 +101,8 @@ a.inner-rounded span {
 	display:none;
 }
 
-a.inner-rounded {
-	//border: 1px solid $medium;
-	//background-color: $light;
-}
 
-a.inner-rounded:hover {
-	//border: 1px solid $dark;
-	//box-shadow: 0px 0px 3px $dark;
-	//background-color: $primary-cta;
-}
-
-.inner-rounded:hover  + .extras-list {
+.label_radio:hover  + .extras-list {
 	display: block;
 	position: absolute;
 	left: 346px;
@@ -128,13 +118,11 @@ a.inner-rounded:hover {
 .divider-line-top {
 	margin-top: 20px;
 	height:1px;
-	//@include bg-dark;
 }
 
 .divider-line-bottom {
 	margin-bottom: 20px;
 	height:1px;
-//@include bg-light;
 }
 
 
@@ -147,18 +135,66 @@ a.inner-rounded:hover {
 	float:left;
 }
 
-.arrow {
+#currency-product-list .arrow {
 	font-size: 137%;
-	//text-shadow: 1px 4px 3px $dark;
 	position: absolute;
 	top: 2px;
 	left: 8px;
   }
 
-.currency-price {
-	//color: $primary-cta-dark;
+
+.has-js .label_check,
+.has-js .label_radio { 
+	padding-left: 24px; 
 }
 
-.currency-offer-total {
-	//color: $headlines;
+.has-js .label_radio { 
+	background: url(../radio-sprite.png) no-repeat 0px 7px; 
+}
+
+.has-js .label_radio:hover { 
+	background-position: 0 -25px; 
+}
+
+.has-js label.r_on { 
+	background-position: 0 -56px; 
+}
+
+.has-js .label_radio input { 
+	position: absolute; 
+	left: -9999px; 
+}
+
+.label_radio {
+	display: block;
+	cursor: pointer;
+}
+
+#currency-product-list {
+	.arrow-e {
+		top: 120px;
+		right: -66px;
+		z-index: 0;
+	}
+}
+
+#currency-product-list {
+	.arrow-base {
+		left: -31px;
+		top: -13px;
+		position: absolute;
+		height: 25px;
+		width: 13px;
+	}
+}
+
+#currency-product-list .circle {
+	right:10px;
+	top: 5px;
+}
+
+.arrow-e-small.cta {
+	position: relative;
+	top: 11px;
+	left: 4px;
 }

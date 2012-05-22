@@ -1,8 +1,4 @@
-.arrow-n, 
-.arrow-e, 
-.arrow-e-small, 
-.arrow-s, 
-.arrow-w {
+@mixin arrow {
 	border-style: dashed;
 	border-color: transparent;
 	border-width: 1.53em;
@@ -19,9 +15,6 @@
 @mixin arrow-e {
 	border-left-width: 1em;
 	border-left-style: solid;
-	top: 120px;
-	right: -66px;
-	z-index: 0;
 }
 
 @mixin arrow-e-small {
@@ -55,6 +48,4 @@
 	width: 2em;
 	height: 2em;
 	@include outer-rounded(5em);
-	right:10px;
-	top: 5px;
   }

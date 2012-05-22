@@ -24,7 +24,11 @@ body {
 	@include inner-rounded;
 }
 
-a.inner-rounded {
+
+/* currency product list styling */
+
+.label_radio .inner-rounded {
+	@include inner-rounded;
 	border: 1px solid $medium;
 	background-color: $light;
 	&:hover {
@@ -32,6 +36,20 @@ a.inner-rounded {
 		box-shadow: 0px 0px 3px $dark;
 		background-color: $primary-cta;
 		}
+		&:hover span {
+		color: $light;
+		}
+}
+
+.label_radio.r_on .inner-rounded {
+		border: 1px solid $light;
+		box-shadow: 0px 0px 3px $dark;
+		background-color: $primary-cta;
+}
+
+
+.label_radio.r_on .inner-rounded span {
+	color: $light;
 }
 
 .gradient-box-bg{
@@ -47,6 +65,15 @@ a.inner-rounded {
 .box-bg{
 	@include box-bg;
 }
+
+.divider-line-top {
+	background-color:$light;
+}
+
+.divider-line-bottom {
+	background-color:$dark;
+}
+
 
 /* shape colors */
 
@@ -67,7 +94,7 @@ a.inner-rounded {
 	@include box-title;
 	margin: -10px -26px 20px;
 	padding: 10px;
-	@include outer-rounded(10px 10px 0 0);
+	@include inner-rounded(5px 5px 0 0);
 	text-align: center;
 	}
 	
@@ -84,6 +111,24 @@ a.inner-rounded {
 
 .currency-faq-title {
 	color: $dark;
+}
+
+/* Differences in the titles */
+
+#currency-faq h1 {
+	position: absolute;
+	top: 7px;
+	left: 26px;
+	margin: -7px -26px;
+	width: 95%;
+	z-index: 0;
+}
+
+/* currency featured games difference */
+
+#currency-featured-games {
+	background-color: $medium;
+	padding: 10px 26px;
 }
 
 

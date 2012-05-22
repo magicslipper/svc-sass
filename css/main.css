@@ -11,6 +11,9 @@ ul li {
 input[type="radio"] {
   background-color: transparent; }
 
+fieldset {
+  border: none; }
+
 /* +++++++++++++++++++++++ Layout ++++++++++++++++++++++++++ */
 #currency-main {
   padding: 0 0 20px;
@@ -18,6 +21,15 @@ input[type="radio"] {
   position: relative;
   border-bottom: 1px dotted #CCC;
   margin: 22px 10px 0; }
+
+#currency-left-content {
+  border-left: 1px dotted #CCC;
+  width: 447px;
+  float: left; }
+
+#currency-right-content {
+  width: 450px;
+  float: left; }
 
 #currency-infopanel-1, #currency-infopanel-2 {
   width: 262px;
@@ -30,7 +42,7 @@ input[type="radio"] {
 #currency-infopanel-1, #currency-product-list {
   margin-right: 30px; }
 
-.gradient-box-bg {
+#currency-infopanel-1 .gradient-box-bg, #currency-infopanel-2 .gradient-box-bg {
   padding: 10px 25px;
   min-height: 300px;
   width: 210px;
@@ -42,7 +54,7 @@ input[type="radio"] {
   left: 0;
   z-index: 50; }
 
-.reflection {
+#currency-infopanel-1 .reflection, #currency-infopanel-2 .reflection {
   position: absolute;
   bottom: -18px;
   width: 100%;
@@ -50,12 +62,27 @@ input[type="radio"] {
   height: 17px;
   border-radius: 10px 10px 0 0!important; }
 
-.arrow-base {
+#currency-infopanel-1 .arrow-e, #currency-infopanel-2 .arrow-e {
+  top: 120px;
+  right: -66px;
+  z-index: 0; }
+
+#currency-infopanel-1 .arrow-base, #currency-infopanel-2 .arrow-base {
   left: -31px;
   top: -13px;
   position: absolute;
   height: 25px;
   width: 13px; }
+
+#currency-infopanel-1 .light-effects, #currency-infopanel-2 .light-effects {
+  position: absolute;
+  width: 255px;
+  height: 255px;
+  left: 3px;
+  overflow: hidden;
+  border: none 0;
+  z-index: 40;
+  bottom: 0; }
 
 #currency-product-list {
   position: relative;
@@ -64,7 +91,10 @@ input[type="radio"] {
   float: left; }
 
 #currency-product-list .gradient-box-bg {
-  width: 279px; }
+  width: 279px;
+  padding: 10px 25px;
+  min-height: 300px;
+  margin: 0 1px 1px; }
 
 #currency-product-list ul li {
   text-align: left;
@@ -74,20 +104,19 @@ input[type="radio"] {
   list-style: none; }
 
 /* widget specific */
-a.inner-rounded {
+.label_radio .inner-rounded {
   padding: 5px;
   margin: 5px 0;
   display: block;
-  width: 100%;
   height: 25px; }
 
-a.inner-rounded input {
+#currency-product-list .inner-rounded input {
   position: absolute;
   left: 10px;
   margin-top: 5px;
   z-index: 1; }
 
-a.inner-rounded span {
+#currency-product-list .inner-rounded span {
   line-height: 23px; }
 
 .currency-icon {
@@ -112,19 +141,18 @@ a.inner-rounded span {
   background-position: 0 -174px; }
 
 .currency-original-total {
-  font-size: 125%;
+  font-size: 110%;
   text-decoration: line-through;
-  margin-right: 15px;
   float: left;
-  width: 54px; }
+  width: 50px; }
 
 .currency-offer-total {
-  font-size: 145%;
+  font-size: 135%;
   font-weight: bold;
   position: relative;
   display: inline-block; }
 
-.currency-offer-total.extra {
+#currency-product-list .currency-offer-total.extra {
   line-height: 8px;
   margin-top: 3px; }
 
@@ -139,7 +167,7 @@ a.inner-rounded span {
 .extras-list {
   display: none; }
 
-.inner-rounded:hover + .extras-list {
+.label_radio:hover + .extras-list {
   display: block;
   position: absolute;
   left: 346px;
@@ -166,11 +194,53 @@ a.inner-rounded span {
 .text {
   float: left; }
 
-.arrow {
+#currency-product-list .arrow {
   font-size: 137%;
   position: absolute;
   top: 2px;
   left: 8px; }
+
+.has-js .label_check,
+.has-js .label_radio {
+  padding-left: 24px; }
+
+.has-js .label_radio {
+  background: url(../radio-sprite.png) no-repeat 0px 7px; }
+
+.has-js .label_radio:hover {
+  background-position: 0 -25px; }
+
+.has-js label.r_on {
+  background-position: 0 -56px; }
+
+.has-js .label_radio input {
+  position: absolute;
+  left: -9999px; }
+
+.label_radio {
+  display: block;
+  cursor: pointer; }
+
+#currency-product-list .arrow-e {
+  top: 120px;
+  right: -66px;
+  z-index: 0; }
+
+#currency-product-list .arrow-base {
+  left: -31px;
+  top: -13px;
+  position: absolute;
+  height: 25px;
+  width: 13px; }
+
+#currency-product-list .circle {
+  right: 10px;
+  top: 5px; }
+
+.arrow-e-small.cta {
+  position: relative;
+  top: 11px;
+  left: 4px; }
 
 #currency-faq {
   float: left;
@@ -196,7 +266,8 @@ a.inner-rounded span {
   background: url("http://dave.wlk.cc/coins-project/images/faq-coins.png") no-repeat scroll 0 0 transparent;
   position: absolute;
   width: 230px;
-  top: -45px; }
+  top: -45px;
+  z-index: 1; }
 
 .faq-toggled-content {
   padding: 10px 10px 5px 30px;
@@ -288,5 +359,3 @@ a.inner-rounded span {
 
 #currency-featured-games a {
   font-weight: bold; }
-
-/* Bolllllllllllox */
